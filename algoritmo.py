@@ -1,8 +1,9 @@
 from classes import *
-import os
+
+Tarefas = []
 
 def main():
-    contID = 0
+
     sair = False
     while sair == False:
         try:
@@ -20,27 +21,21 @@ def main():
 
             match menu:
                 case 1:
-                    os.system("cls")
+
                     print("---ADICIONAR TAREFAS---")
                     print("INFORME SUA TAREFA")
-                    contID += 1
-                    id = contID
                     descricao = input(">> ")
-
-                    ToDoList.adicionar_tarefa(id, descricao)
-                    
+                    ToDoList.adicionar_tarefa(descricao)
                     print("TAREFA SALVA")
                     print("--------")
-                    os.system("pause")
-
                 
+                case 2:
+
+                    ToDoList.excluir_tarefa
                 
                 case 3:
-
-                    os.system("cls")
                     print("LISTA DE TAREFAS")
                     ToDoList.listar_tarefas()
-                    os.system("pause")
 
                 case 0:
                     print("SAINDO ...")
