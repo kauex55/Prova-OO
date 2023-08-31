@@ -7,7 +7,6 @@ def main():
     sair = False
     while sair == False:
         try:
-            os.system("cls")
             print("---MENU---")
             print("1 - ADICIONAR TAREFAS")
             print("2 - EXCLUIR TAREFAS")
@@ -17,7 +16,6 @@ def main():
 
             print("Qual opção deseja?")
             menu = int(input(">> "))
-            os.system("pause")
 
             match menu:
                 case 1:
