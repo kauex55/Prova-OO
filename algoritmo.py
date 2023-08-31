@@ -2,15 +2,16 @@ from classes import *
 import os
 
 def main():
-
+    contID = 0
     sair = False
     while sair == False:
         try:
             os.system("cls")
             print("---MENU---")
-            print("01 - ADICIONAR TAREFAS")
-            print("02 - EXCLUIR TAREFAS")
-            print("03 - LISTAR TAREFAS")
+            print("1 - ADICIONAR TAREFAS")
+            print("2 - EXCLUIR TAREFAS")
+            print("3 - LISTAR TAREFAS")
+            print("0 - SAIR")
 
 
             print("Qual opção deseja?")
@@ -22,8 +23,32 @@ def main():
                     os.system("cls")
                     print("---ADICIONAR TAREFAS---")
                     print("INFORME SUA TAREFA")
+                    contID += 1
+                    id = contID
                     descricao = input(">> ")
 
+                    ToDoList.adicionar_tarefa(id, descricao)
+                    
+                    print("TAREFA SALVA")
+                    print("--------")
+                    os.system("pause")
+
+                
+                
+                case 3:
+
+                    os.system("cls")
+                    print("LISTA DE TAREFAS")
+                    ToDoList.listar_tarefas()
+                    os.system("pause")
+
+                case 0:
+                    print("SAINDO ...")
+                    print("------")
+                    sair = True
+                
+                case _:
+                    ("Valor inválido")
 
 
         except Exception as erro:
